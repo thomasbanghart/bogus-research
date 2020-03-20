@@ -8,7 +8,7 @@ sdk = looker_sdk.init40()
 models = looker_sdk.models40
 
 def swap_dataset(connection: str = "brick-layer", dataset: str="hubspot_marketing"):
-    res = sdk.update_connection(connection, models.WriteDBConnection(database=dataset)) #Update connection reference 
+    sdk.update_connection(connection, models.WriteDBConnection(database=dataset)) #Update connection reference 
     return
     
 def download_dashboard(
