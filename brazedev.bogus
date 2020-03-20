@@ -1,0 +1,2926 @@
+[
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 1,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "message_variation_iupdated_at",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.campaign_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "event_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "PUSH_NOTIFICATION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 1001,
+      "max_value": 2000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "name",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "cryptocurrency_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "properties",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CUSTOM_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 2001,
+      "max_value": 3000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "currency",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "product_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "price",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "properties",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "PURCHASE_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 3001,
+      "max_value": 4000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "duration",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "event_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "session_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SESSION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_IMPRESSION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 4001,
+      "max_value": 5000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_IMPRESSION_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "NEWSFEED_IMPRESSION_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_IMPRESSION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_IMPRESSION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "NEWSFEED_IMPRESSION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "UNINSTALL_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 5001,
+      "max_value": 6000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "UNINSTALL_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "UNINSTALL_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "UNINSTALL_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "UNINSTALL_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 6001,
+      "max_value": 7000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "canvas_conversion_behavior_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_CONVERSION_BEHAVIOR.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_BEHAVIOR",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 7001,
+      "max_value": 8000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_BEHAVIOR",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_BEHAVIOR",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_BEHAVIOR",
+    "field_name": "conversion_behavior_index",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 10
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_BEHAVIOR",
+    "field_name": "conversion_behavior",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 8001,
+      "max_value": 9000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "conversion_behavior_index",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN_CONVERSION_BEHAVIOR.conversion_behavior_index",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN_CONVERSION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 9001,
+      "max_value": 10000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "alt_accuracy",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 100
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "altitude",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 100
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "latitude",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "latitude",
+    "fk_args": {},
+    "bq_type": "FLOAT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "ll_accuracy",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 100
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "longitude",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "longitude",
+    "fk_args": {},
+    "bq_type": "FLOAT64"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "LOCATION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 10001,
+      "max_value": 11000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "message_variation_updated_at",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.campaign_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "WEBHOOK_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 11001,
+      "max_value": 12000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "in_control_group",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_ENTRY_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 12001,
+      "max_value": 13000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "card_id",
+    "dataset": "brazedev",
+    "from": "CARD.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "card_updated_at",
+    "dataset": "brazedev",
+    "from": "CARD.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "event_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "NEWSFEED_CARD_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 13001,
+      "max_value": 14000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "message_variation_iupdated_at",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.campaign_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "email_address",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_email",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "event_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "random_element",
+    "fk_args": {
+      "elements": "[Send, Delivery, Open, Clicks, Bounce, SoftBounce, MarkAsSpam, Unsubscribe]"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "sending_ip",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "url",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "domain_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "user_agent",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "EMAIL_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 14001,
+      "max_value": 15000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN_ENROLLMENT_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "DEVICE",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 15001,
+      "max_value": 16000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "DEVICE",
+    "field_name": "device_model",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "DEVICE",
+    "field_name": "os_version",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "DEVICE",
+    "field_name": "platform",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "random_element",
+    "fk_args": {
+      "elements": "[iOS, Android, Web, Other]"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 16001,
+      "max_value": 17000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "message_variation_iupdated_at",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.campaign_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "email_address",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_email",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "subscription_group_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "subscription_status",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "random_element",
+    "fk_args": {
+      "elements": "[Subscribed, Unsubscribed]"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "SUBSCRIPTION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_TAG",
+    "field_name": "tag",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 17001,
+      "max_value": 18000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN_TAG",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CAMPAIGN_TAG",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 18001,
+      "max_value": 19000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "updated_at",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "archived",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "channel_email",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "channel_android_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "channel_ios_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "channel_web_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "channel_webhook",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "created_at",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "draft",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "error",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "first_sent",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "last_sent",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "name",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "cryptocurrency_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS",
+    "field_name": "schedule_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_VARIATION",
+    "field_name": "name",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 19001,
+      "max_value": 20000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_VARIATION",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_VARIATION",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_TAG",
+    "field_name": "tag",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 20001,
+      "max_value": 21000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_TAG",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_TAG",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 21001,
+      "max_value": 22000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "alert",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "body",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "paragraph",
+    "fk_args":  {
+      "nb_sentences": 3,
+      "variable_nb_sentences": true
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "channel",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "random_element",
+    "fk_args": {
+      "elements": "[email, ios_push, webhook, content_card, in-app_message, sms]"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "extras",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "from",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "headers",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "method",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "random_element",
+    "fk_args": {
+      "elements": "[GET, PUT, POST, PATCH, RECEIVE]"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "name",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "cryptocurrency_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "reply_to",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "subject",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "paragraph",
+    "fk_args": {
+      "nb_sentences": 3,
+      "variable_nb_sentences": true
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "title",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "MESSAGE_VARIATION",
+    "field_name": "url",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "domain_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 22001,
+      "max_value": 23000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "canvas_step_name",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "channel_android_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "channel_ios_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "channel_web_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS_STEP",
+    "field_name": "channel_webhook",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CANVAS_STEP_SEQ",
+    "field_name": "canvas_step_seq",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 20
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_STEP_SEQ",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_STEP_SEQ",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 24001,
+      "max_value": 25000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "archived",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "created_at",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "description",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "paragraph",
+    "fk_args": {
+      "nb_sentences": 3,
+      "variable_nb_sentences": true
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "draft",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "end_at",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "image_url",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "domain_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "message",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "paragraph",
+    "fk_args": {
+      "nb_sentences": 3,
+      "variable_nb_sentences": true
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "name",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "cryptocurrency_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "publish_at",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "title",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD",
+    "field_name": "updated_at",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CARD_EXTRA",
+    "field_name": "key",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 25001,
+      "max_value": 26000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CARD_EXTRA",
+    "field_name": "card_id",
+    "dataset": "brazedev",
+    "from": "CARD.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CARD_EXTRA",
+    "field_name": "card_updated_at",
+    "dataset": "brazedev",
+    "from": "CARD.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CARD_EXTRA",
+    "field_name": "value",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CARD_TAG",
+    "field_name": "tag",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 26001,
+      "max_value": 27000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CARD_TAG",
+    "field_name": "card_id",
+    "dataset": "brazedev",
+    "from": "CARD.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CARD_TAG",
+    "field_name": "card_updated_at",
+    "dataset": "brazedev",
+    "from": "CARD.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 27001,
+      "max_value": 28000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "campaign_id",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "campaign_updated_at",
+    "dataset": "brazedev",
+    "from": "CAMPAIGN.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "canvas_step_id",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "canvas_step_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS_STEP.canvas_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "message_variation_id",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "message_variation_iupdated_at",
+    "dataset": "brazedev",
+    "from": "MESSAGE_VARIATION.campaign_updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "card_id",
+    "dataset": "brazedev",
+    "from": "CARD.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "card_updated_at",
+    "dataset": "brazedev",
+    "from": "CARD.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "device_id",
+    "dataset": "brazedev",
+    "from": "DEVICE.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "canvas_variation_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "app_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "button_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "event_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "random_element",
+    "fk_args": {
+      "elements": "[Send, Delivery, Open, Clicks, Bounce, SoftBounce, MarkAsSpam, Unsubscribe]"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "send_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "timezone",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "IN_APP_MESSAGE_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_BEHAVIOR",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 28001,
+      "max_value": 29000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_BEHAVIOR",
+    "field_name": "canvas_id",
+    "dataset": "brazedev",
+    "from": "CANVAS.id",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_BEHAVIOR",
+    "field_name": "canvas_updated_at",
+    "dataset": "brazedev",
+    "from": "CANVAS.updated_at",
+    "dist": "fk"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_BEHAVIOR",
+    "field_name": "conversion_behavior_index",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 10
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CANVAS_CONVERSION_BEHAVIOR",
+    "field_name": "conversion_behavior",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 29001,
+      "max_value": 30000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "updated_at",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "archived",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "channel_email",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "channel_android_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "channel_ios_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "channel_web_push",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "channel_webhook",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "created_at",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "draft",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "error",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pybool",
+    "fk_args": {},
+    "bq_type": "BOOL"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "first_sent",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "last_sent",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "name",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "cryptocurrency_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "CAMPAIGN",
+    "field_name": "schedule_type",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "ATTRIBUTION_EVENT",
+    "field_name": "id",
+    "dataset": "brazedev",
+    "dist": "pk",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 30001,
+      "max_value": 31000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "ATTRIBUTION_EVENT",
+    "field_name": "external_user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  },
+  {
+    "table_name": "ATTRIBUTION_EVENT",
+    "field_name": "source",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "safe_color_name",
+    "fk_args": {},
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "ATTRIBUTION_EVENT",
+    "field_name": "time",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "past_datetime",
+    "fk_args": {
+      "start_date": "-3y"
+    },
+    "bq_type": "STRING"
+  },
+  {
+    "table_name": "ATTRIBUTION_EVENT",
+    "field_name": "user_id",
+    "dataset": "brazedev",
+    "dist": "random",
+    "fk_type": "pyint",
+    "fk_args": {
+      "min_value": 0,
+      "max_value": 1000
+    },
+    "bq_type": "INT64"
+  }
+]
